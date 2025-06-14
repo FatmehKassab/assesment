@@ -30,3 +30,15 @@ body {
   color: var(--foreground);
   font-family: var(--font-roboto-flex);
 }
+
+/* Hide native password reveal button (Chrome, Edge, Safari) */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear,
+input[type="password"]::-webkit-password-toggle-button,
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-inner-spin-button,
+input[type="password"]::-webkit-clear-button {
+  display: none !important;
+  -webkit-appearance: none !important;
+  appearance: none !important;
+}

@@ -24,7 +24,7 @@ const TextInput = ({
   const hasValue = value?.length > 0;
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full ">
       {fullBorder && (
         <label
           htmlFor={label.toLowerCase()}
@@ -41,7 +41,7 @@ const TextInput = ({
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={label}
-        className={`peer w-full py-2 pl-2 pr-10 text-base text-black placeholder-transparent focus:outline-none
+        className={`peer w-full py-2 pl-2 pr-10 text-base text-text placeholder-transparent focus:outline-none
     ${
       fullBorder
         ? "border border-primary rounded-md"
@@ -75,7 +75,7 @@ const TextInput = ({
         >
           <img
             src={passwordHidden ? ICONS.show : ICONS.hide}
-            className="w-5 h-5"
+            className="w-5 h-5 cursor-pointer"
             alt="Toggle visibility"
           />
         </button>

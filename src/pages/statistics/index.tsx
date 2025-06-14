@@ -5,7 +5,7 @@ const Statistics: React.FC = () => {
   return (
     <Layout
       content={
-        <p className=" text-text text-4xl font-extrabold font-serif capitalize  space-y-4">
+        <p className=" text-text sm:text-4xl font-extrabold font-serif capitalize  space-y-4">
           statistics!
         </p>
       }

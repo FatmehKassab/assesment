@@ -1,11 +1,26 @@
-import { useLocation, Outlet } from "react-router-dom";
+import { useLocation, Outlet, useNavigate } from "react-router-dom";
 import menuItemsData from "./menuItemsData";
 import MenuItem from "./MenuItem";
 import { IMAGES } from "../../utils/images";
+import Button from "../Button";
+import { useAuth } from "../../context/AuthContext";
+import React from "react";
 
 const Sidebar = () => {
   const currentLocation = useLocation();
+  const { logout, isLoggedIn } = useAuth();
+  const navigate = useNavigate();
 
+  React.useEffect(() => {
+    if (!isLoggedIn) {
+      navigate("/login");
+    }
+  }, [isLoggedIn, navigate]);
+
+  const handleLogout = () => {
+    logout();
+    navigate("/login");
+  };
   return (
     <div className="w-full h-full bg-white text-primary  shadow">
       <div className="w-full h-[10%] max-h-[70px] flex items-start justify-center p-5">
@@ -17,7 +32,7 @@ const Sidebar = () => {
           className="min-w-[150px] object-cover"
         />
       </div>
-      <div className="w-full h-[90%]">
+      <div className="w-full h-[80%]">
         {menuItemsData.map((menuItem, index) => (
           <MenuItem
             key={index}
@@ -27,6 +42,15 @@ const Sidebar = () => {
           />
         ))}
       </div>
+      <div className="w-full h-[10%] flex items-start justify-center p-5">
+        <Button
+          title="logout"
+          width="fit"
+          className="block sm:hidden"
+          onClick={handleLogout}
+        />
+      </div>
+
       <Outlet />
     </div>
   );

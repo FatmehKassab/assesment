@@ -8,7 +8,7 @@ const Dashboard: React.FC = () => {
   return (
     <Layout
       content={
-        <div className=" text-text text-4xl font-extrabold font-serif capitalize  space-y-4">
+        <div className=" text-text sm:text-4xl font-extrabold font-serif capitalize  space-y-4">
           {user ? (
             <>
               <p>Welcome, {user.username}!</p>

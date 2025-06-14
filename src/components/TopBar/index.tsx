@@ -27,6 +27,7 @@ const Topbar = ({ pageTitle }: any) => {
         width="fit"
         bgColor="white"
         textColor="primary"
+        className="hidden sm:block"
         onClick={handleLogout}
       />
     </div>

@@ -15,17 +15,15 @@ const MenuItem: React.FC<MenuItemProps> = ({
   isActive,
 }) => {
   return (
-    <div
-      className={`w-full  py-2 hover:bg-primary/20 hover:rounded-md mt-2 ${
-        isActive ? "border-r-2 border-primary bg-primary/15 rounded-md" : ""
-      }`}
-    >
-      <NavLink to={path || ""} onClick={onClick}>
-        <div className="flex items-center px-4 gap-2 ">
-          <span>{pageTitle}</span>
-        </div>
-      </NavLink>
-    </div>
+    <NavLink to={path || ""} onClick={onClick}>
+      <div
+        className={`w-full px-4 py-2 hover:bg-primary/20 hover:rounded-md mt-2 ${
+          isActive ? "border-r-2 border-primary bg-primary/15 rounded-md" : ""
+        }`}
+      >
+        <span>{pageTitle}</span>
+      </div>
+    </NavLink>
   );
 };
 

@@ -21,8 +21,8 @@ const Layout: React.FC<LayoutProps> = ({ content }) => {
         <Sidebar />
       </div>
 
-      <div className="flex flex-col ml-48 w-[calc(100%-12rem)]">
-        <div className="fixed top-0 left-48 w-[calc(100%-12rem)] z-10">
+      <div className="flex flex-col ml-48 w-[calc(100%-12rem)] ">
+        <div className="fixed top-0 left-48 w-[calc(100%-12rem)] z-10 p-3">
           <Topbar pageTitle={currentItem?.pageTitle || "Page"} />
         </div>
 

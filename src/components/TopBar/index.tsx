@@ -20,8 +20,8 @@ const Topbar = ({ pageTitle }: any) => {
   };
 
   return (
-    <div className="w-full h-[10%] min-h-[70px] flex items-center justify-between bg-primary shadow px-4">
-      <h1 className="text-white fonr-bold text-2xl">{pageTitle}</h1>
+    <div className="w-full h-[10%] min-h-[70px] flex items-center justify-between bg-primary rounded-2xl shadow px-4">
+      <h1 className="text-white font-semibold text-xl">{pageTitle}</h1>
       <Button
         title="logout"
         width="fit"

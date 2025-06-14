@@ -1,16 +1,10 @@
-import { useState } from "react";
 import { useLocation, Outlet } from "react-router-dom";
 import menuItemsData from "./menuItemsData";
 import MenuItem from "./MenuItem";
 import { IMAGES } from "../../utils/images";
 
 const Sidebar = () => {
-  const [expandedMenu, setExpandedMenu] = useState<string | null>(null);
   const currentLocation = useLocation();
-
-  const handleExpand = (menu: string) => {
-    setExpandedMenu(expandedMenu === menu ? null : menu);
-  };
 
   return (
     <div className="w-full h-full bg-white text-primary  shadow">
@@ -29,7 +23,6 @@ const Sidebar = () => {
             key={index}
             pageTitle={menuItem.pageTitle}
             path={menuItem.path}
-            onClick={() => handleExpand(menuItem.pageTitle)}
             isActive={currentLocation.pathname === menuItem.path}
           />
         ))}

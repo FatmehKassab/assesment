@@ -13,26 +13,23 @@ const Sidebar = () => {
   };
 
   return (
-    <div className="w-full h-full bg-primary text-white rounded-r-3xl">
+    <div className="w-full h-full bg-white text-primary  shadow">
       <div className="w-full h-[10%] max-h-[70px] flex items-start justify-center p-5">
         <img
-          src={IMAGES.white_logo}
+          src={IMAGES.logo}
           alt="Logo"
           width={200}
           height={50}
           className="min-w-[150px] object-cover"
         />
       </div>
-      <div className="w-full h-[90%] p-2">
+      <div className="w-full h-[90%]">
         {menuItemsData.map((menuItem, index) => (
           <MenuItem
             key={index}
-            // icon={menuItem.icon}
-            title={menuItem.title}
+            pageTitle={menuItem.pageTitle}
             path={menuItem.path}
-            isExpanded={expandedMenu === menuItem.title}
-            onClick={() => handleExpand(menuItem.title)}
-            subMenu={menuItem.subMenu}
+            onClick={() => handleExpand(menuItem.pageTitle)}
             isActive={currentLocation.pathname === menuItem.path}
           />
         ))}

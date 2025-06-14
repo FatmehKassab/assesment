@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ICONS } from "../../utils/icons";
+import { ICONS } from "../../../utils/icons";
 
 interface TextInputProps {
   label: string;

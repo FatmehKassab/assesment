@@ -4,7 +4,6 @@ import type { ReactNode, FC } from "react";
 interface UserPayload {
   username: string;
   role: string;
-  iat?: number;
   exp?: number;
 }
 
@@ -34,8 +33,7 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
       const payload: UserPayload = {
         username,
         role: "admin",
-        iat: Math.floor(Date.now() / 1000),
-        exp: Math.floor(Date.now() / 1000) + 3600, // expires in 30 seconds
+        exp: Math.floor(Date.now() / 1000) + 50, // expires in 50 seconds
       };
       const token = btoa(JSON.stringify(payload));
       setToken(token);
@@ -53,17 +51,15 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
   const isLoggedIn =
     !!user && (!user.exp || user.exp > Math.floor(Date.now() / 1000));
 
-  // Log token to console whenever it changes
   useEffect(() => {
     console.log("Auth Token:", token);
   }, [token]);
 
-  // Auto logout and alert on token expiry
   useEffect(() => {
     if (!user || !user.exp) return;
 
     const now = Math.floor(Date.now() / 1000);
-    const delay = (user.exp - now) * 1000; // ms until expiry
+    const delay = (user.exp - now) * 1000;
 
     if (delay <= 0) {
       alert("Your session has expired. Please log in again.");

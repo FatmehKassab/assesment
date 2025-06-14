@@ -8,6 +8,8 @@ interface ButtonProps {
   className?: string;
   onClick?: () => void;
   bgColor?: string;
+  width?: string;
+  textColor?: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -17,14 +19,18 @@ const Button: React.FC<ButtonProps> = ({
   className = "",
   onClick,
   bgColor = "primary",
+  width = "full",
+  textColor = "white",
 }) => {
   return (
     <button
-      className={`w-full flex items-center justify-center gap-2 bg-${bgColor} hover:bg-${bgColor}/80 py-2 rounded-full  ${className}`}
+      className={`w-${width} flex items-center justify-center gap-2 cursor-pointer bg-${bgColor} hover:shadow-lg py-2 px-4 rounded-full  ${className}`}
       type={type}
       onClick={onClick}
     >
-      <span className="font-semibold text-sm cursor-pointer capitalize text-white">
+      <span
+        className={`font-semibold text-sm cursor-pointer capitalize text-${textColor}`}
+      >
         {title}
       </span>
       {icon && (

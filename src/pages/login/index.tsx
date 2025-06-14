@@ -14,10 +14,10 @@ const Login: React.FC = () => {
           alt="Logo"
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-l from-white via-white/60 to-white/0"></div>
+        <div className="absolute inset-0 translate-y-1 translate-x-0 md:translate-x-1 md:translate-y-0 bg-gradient-to-t md:bg-gradient-to-l from-white via-white/60 to-white/0"></div>
       </div>
       <div className="w-full h-3/4 md:w-3/5 md:h-full flex items-center justify-center  ">
-        <div className="w-[90%] max-w-[400px] md:w-3/5 h-3/4 md:min-w-[400px] md:max-w-none p-2 gap-4 rounded-2xl flex flex-col items-center justify-evenly shadow ">
+        <div className="w-[90%] max-w-[400px] md:w-3/5 h-3/4 min-h-[500px] md:min-w-[400px] md:max-w-none p-2 gap-4 rounded-2xl flex flex-col items-center justify-evenly shadow ">
           <img src={IMAGES.logo} className="w-56" alt="Logo" />
           <h1 className="text-primary font-bold text-2xl text-center capitalize w-3/4">
             restaurant management system Admin Login

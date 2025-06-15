@@ -1,3 +1,14 @@
+
+-To run this project locally:
+
+git clone https://github.com/your-username/I-MANAGE-ASSESSMENT.git
+cd I-MANAGE-ASSESSMENT
+npm install 
+npm run dev
+
+
+-Project Architecture:
+
 I-MANAGE-ASSESSMENT/
 ├── public/                 # Static files accessible publicly
 │   ├── icons/              # Icon assets
@@ -23,9 +34,9 @@ I-MANAGE-ASSESSMENT/
 │   │
 │   ├── utils/              # Utility/helper functions
 │   │
-│   ├── App.tsx            # App root component
-│   ├── globals.css        # Global styles
-│   ├── main.tsx           # App entry point
-│   └── vite-env.d.ts      # Vite environment typings
+│   ├── App.tsx             # App root component
+│   ├── globals.css         # Global styles
+│   ├── main.tsx            # App entry point
+│   └── vite-env.d.ts       # Vite environment typings
 │
 ├── node_modules/           # Project dependencies

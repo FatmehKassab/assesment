@@ -1,5 +1,5 @@
-import { useLocation, Outlet, useNavigate } from "react-router-dom";
-import menuItemsData from "./menuItemsData";
+import { useLocation, useNavigate } from "react-router-dom";
+import menuItemsData from "../../utils/menuItemsData";
 import MenuItem from "./MenuItem";
 import { IMAGES } from "../../utils/images";
 import Button from "../Button";
@@ -50,8 +50,6 @@ const Sidebar = () => {
           onClick={handleLogout}
         />
       </div>
-
-      <Outlet />
     </div>
   );
 };

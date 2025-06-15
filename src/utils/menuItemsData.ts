@@ -1,6 +1,6 @@
 
   
-  const menuItemsData = [
+  export const menuItemsData = [
     {
 
       pageTitle: "Dashboard",

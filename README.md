@@ -1,7 +1,7 @@
 
 -To run this project locally:
 
-git clone https://github.com/your-username/I-MANAGE-ASSESSMENT.git
+git clone https://github.com/FatmehKassab/assesment.git
 cd I-MANAGE-ASSESSMENT
 npm install 
 npm run dev
